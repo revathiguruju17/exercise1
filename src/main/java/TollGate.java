@@ -1,25 +1,24 @@
-public class TollGate {
-    private  int tollNumber;
-    private int costFor2Wheeler;
-    private int costFor4Wheeler;
+class TollGate {
+    private int tollNumber;
+    private Vehicle twoWheeler;
+    private Vehicle fourWheeler;
 
 
-    TollGate(int tollNumber, int costFor2Wheeler, int costFor4Wheeler) {
+    TollGate(int tollNumber, Vehicle twoWheeler, Vehicle fourWheeler) {
         this.tollNumber = tollNumber;
-        this.costFor2Wheeler = costFor2Wheeler;
-        this.costFor4Wheeler = costFor4Wheeler;
+        this.twoWheeler = twoWheeler;
+        this.fourWheeler = fourWheeler;
     }
-
 
     int getTollNumber() {
         return tollNumber;
     }
 
     int getCostFor2Wheeler() {
-        return costFor2Wheeler;
+        return this.twoWheeler.getCost();
     }
 
     int getCostFor4Wheeler() {
-        return costFor4Wheeler;
+        return this.fourWheeler.getCost();
     }
 }
