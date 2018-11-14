@@ -5,7 +5,7 @@ abstract class Vehicle {
         this.cost = cost;
     }
 
-    public int getCost(){
+    int getCost(){
        return this.cost;
     }
 

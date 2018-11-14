@@ -18,4 +18,20 @@ class OuterRingRoadTest {
         int tollFee = outerRingRoad.calculateTollFee( "4W", 2,4 );
         assertEquals(55,tollFee);
     }
+
+    @Test
+    void calculateTollFee3(){
+        OuterRingRoad outerRingRoad = new OuterRingRoad();
+        outerRingRoad.setUpTollGates();
+        int tollFee = outerRingRoad.calculateTollFee( "4W", 4,2 );
+        assertEquals(60,tollFee);
+    }
+
+    @Test
+    void calculateTollFee4(){
+        OuterRingRoad outerRingRoad = new OuterRingRoad();
+        outerRingRoad.setUpTollGates();
+        int tollFee = outerRingRoad.calculateTollFee( "2W", 2,1 );
+        assertEquals(45,tollFee);
+    }
 }
